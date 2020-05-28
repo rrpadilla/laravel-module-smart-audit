@@ -4,7 +4,7 @@ This module is based on the [laravel auditing package](https://github.com/owen-i
 
 Smart Audit module allows you to keep a history of model changes by simply using a trait. Retrieving the audited data is straightforward, making it possible to display it in various ways.
 
-It's very simple, using the **getDirty()** method to get the attributes that have been changed.
+Under the hood this module is using the **getDirty()** method to get the attributes that have been changed.
 
 **THIS IS NOT A PACKAGE, IT'S A MODULE WITH A GROUP OF REUSABLE CLASES**.
 
