@@ -55,6 +55,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use App\Modules\SmartAudit\SmartAudit;
+use Illuminate\Http\Request;
 
 class ReservationAuditsController extends Controller
 {
