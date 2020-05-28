@@ -1,4 +1,4 @@
-# Smart Audit
+# Laravel Smart Audit
 
 This module is based on the [laravel auditing package](https://github.com/owen-it/laravel-auditing).
 
