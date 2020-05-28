@@ -61,9 +61,9 @@ class ReservationAuditsController extends Controller
 {
     public function index(Request $request, $id)
     {
-        $reservation = Reservation::findOrFail($id);
-
         $this->authorize('viewAudits', Reservation::class);
+            
+        $reservation = Reservation::findOrFail($id);
         
         // Paginate the associated audits
         $audits = $reservation->audits()->with('user')->latest()->paginate(15);
