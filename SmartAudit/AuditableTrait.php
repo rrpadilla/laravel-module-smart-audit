@@ -221,24 +221,6 @@ trait AuditableTrait
     }
 
     /**
-     * Get the old/new attributes of a created event.
-     *
-     * @return \App\Modules\SmartAudit\OldNew
-     */
-    protected function getCreatedEventAttributes(): OldNew
-    {
-        $new = [];
-
-        foreach ($this->attributes as $attribute => $value) {
-            if ($this->isAttributeAuditable($attribute)) {
-                $new[$attribute] = $value;
-            }
-        }
-
-        return new OldNew([], $new);
-    }
-
-    /**
      * Determine if an attribute is eligible for auditing.
      *
      * @param string $attribute
@@ -274,6 +256,24 @@ trait AuditableTrait
     public function getAuditInclude(): array
     {
         return $this->auditInclude ?? [];
+    }
+
+    /**
+     * Get the old/new attributes of a created event.
+     *
+     * @return \App\Modules\SmartAudit\OldNew
+     */
+    protected function getCreatedEventAttributes(): OldNew
+    {
+        $new = [];
+
+        foreach ($this->attributes as $attribute => $value) {
+            if ($this->isAttributeAuditable($attribute)) {
+                $new[$attribute] = $value;
+            }
+        }
+
+        return new OldNew([], $new);
     }
 
     /**
