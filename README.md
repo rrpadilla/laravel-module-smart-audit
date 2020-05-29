@@ -2,9 +2,11 @@
 
 This module is based on the [laravel auditing package](https://github.com/owen-it/laravel-auditing).
 
-Smart Audit module allows you to keep a history of model changes by simply using a trait. Retrieving the audited data is straightforward, making it possible to display it in various ways.
+### Smart Audit module records model changes whenever an Eloquent created, updated, restored, or deleted event is dispatched. 
 
-Under the hood this module is using the **getDirty()** method to get the attributes that have been changed.
+Retrieving the audited data is straightforward, making it possible to display it in various ways.
+
+Under the hood this module is using the **getChanges()** method to get the attributes that have been changed.
 
 **THIS IS NOT A PACKAGE, IT'S A MODULE WITH A GROUP OF REUSABLE CLASES**.
 
