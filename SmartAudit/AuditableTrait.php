@@ -286,7 +286,7 @@ trait AuditableTrait
         $old = [];
         $new = [];
 
-        foreach ($this->getDirty() as $attribute => $value) {
+        foreach ($this->getChanges() as $attribute => $value) {
             if ($this->isAttributeAuditable($attribute)) {
                 $old[$attribute] = Arr::get($this->original, $attribute);
                 $new[$attribute] = Arr::get($this->attributes, $attribute);
